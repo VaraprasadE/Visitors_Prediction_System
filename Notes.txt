@@ -1,0 +1,25 @@
+################# DATABASE AND QUERIES ################
+mysql> CREATE DATABASE EV;
+mysql> USE EV;
+mysql> 
+
+CREATE TABLE `day_base_visitor_predict` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `no_of_visitors` int NOT NULL,
+  `working_time` int NOT NULL,
+  `no_of_ports` int NOT NULL,
+  `power_consumption` int NOT NULL,
+  `parking_slots` int NOT NULL,
+  `accommodable_visitors` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+################ FOLDER PERMISSIONS #################
+$ sudo chmod 777 -R /var/www/html
+
+################ PYTHON MODULES INSTALLATION ##############
+$ sudo apt-get install python3-pip
+$ sudo python3 -m pip install pymysql
+$ sudo python3 -m pip install pandas
+$ sudo python3 -m pip install scikit-learn
